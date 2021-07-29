@@ -1,0 +1,52 @@
+
+    <h1 class="font">Billing Information<h1><br/>
+        <form  [formGroup]="myForm" (ngSubmit)="collectBillingInfo()">
+        <div>
+        <input placeholder="FIRST NAME" formControlName="firstname" class="input" type="text"/>
+        </div>
+        <div><br/>
+        <input placeholder="LAST NAME"  formControlName="lastname" class="input"type="text"/>
+        </div><br/>
+        <div>
+        <input placeholder="EMAIL" formControlName="email" class="input" type="email"/>
+        <span *ngIf="myForm.get('email').errors"><br/>
+        <h4>Email must be valid</h4>
+         </span>
+        </div><br/>
+        <div>
+        <input  placeholder="Phone" formControlName="phone" class="input" type="text"/>
+        <h4 *ngIf="myForm.get('phone').errors">Phone must be 10 digits</h4>
+        </div>
+        <div class="add">
+        <div class="input2">
+        <input placeholder="ZIP-CODE"  formControlName="zipcode" class="input" type="text"/>
+        </div><br/>
+        <div class="input2">
+        <input placeholder="CITY"  formControlName="city" class="input" type="text"/>
+        </div><br/>
+        <div class="input2">
+        <input placeholder="STATE" formControlName="state" class="input" type="text"/>
+        </div><br/>
+        <div class="input2">
+        <input placeholder="STREET" formControlName="street" class="input" type="text"/>
+        </div><br/>
+        <div class="input2">
+        <input placeholder="ET"  required formControlName="country" class="input" type="text"/>
+    
+    <span *ngIf="myForm.get('country').errors"><br/>
+        <h4 class="left">country code must be two letters</h4>
+    </span>
+        </div>
+        </div><br/>
+        <div class="Amount">Amount <b>$ {{Price}} USD</b></div>
+       <div class="message">{{message}}</div><br/>
+        </form>
+        <button class="favorite styled" (click)="Back()">Back</button>{{"   "}}
+        <button type="submit" class="favorite styled1" (click)="collectBillingInfo()">Next</button>
+        <div  *ngIf="myForm?.valid"  class="label1">
+        <div *ngIf="visiblity">
+        <label class="label" for="customer">Card Information </label><br/><br/>
+        <div class="input"><ngx-stripe-card [options]="cardOptions" [elementsOptions]="elementsOptions"></ngx-stripe-card></div><br/>
+        <button type="submit" class="favorite styled" (click)="createToken()">Pay</button>
+        </div>
+        </div>

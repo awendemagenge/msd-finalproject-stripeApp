@@ -1,0 +1,21 @@
+<div class="classic">
+    <h1><a href="http://imdb.com" class="imdb-logo">IMDb</a> 
+    <span class="font" > Buy classic movies now</span>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" data-toggle="shopping-cart-dropdown" rel="stylesheet">
+    <button (click)="showCart()" type="button" class="shopping-cart-button float-right" data-toggle="shopping-cart-dropdown">
+    <i class="fa fa-shopping-cart"></i>
+    <span class="text">Cart</span>
+  </button>
+    </h1>
+    </div>
+    <mat-grid-list  cols="2">
+    <mat-grid-tile *ngFor="let item of data">
+    <img class="image" src={{item.pic}}>
+    <ul style="list-style: none;" class="fontstyle"><li>{{item.Title}}</li><br/>
+    <li>Released In {{item.Released}}</li><br/>
+    <li>{{"$"}}{{item.price}} USD</li><br/>
+    <button type="submit" class="favorite styled" (click)="checkout(item)">checkout</button>
+    <button type="submit" class="favorite styled" (click)="addingToCart(item)">Add ToCart</button>
+    </ul>
+    </mat-grid-tile>
+    </mat-grid-list>

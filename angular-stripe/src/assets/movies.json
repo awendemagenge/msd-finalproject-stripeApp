@@ -1,0 +1,43 @@
+{
+  "movies": [
+    {  "id":"1",
+      "Title": "The Breakfast Club",
+      "Released": 1995,
+      "price": 5,
+      "pic":"./assets/thebreakfastclub.jpg",
+      "url": "https://www.youtube.com/watch?v=sdrTKPyW018"
+    },{"id":"2",
+        "Title": "Fight Club",
+        "Released": 1999,
+        "price": 7,
+        "pic":"./assets/fightclub.jpg",
+        "url": "https://www.youtube.com/watch?v=CR5Jp_ag2M8"
+      }, {"id":"3",
+        "Title": "Pulp Fiction",
+        "Released": 1994,
+        "price": 10,
+        "pic":"./assets/pulpfiction.jpg",
+        "url": "https://www.youtube.com/watch?v=CR5Jp_ag2M8"
+      },{"id":"3",
+        "Title": "Scareface",
+        "Released": 1983,
+        "price": 5,
+        "pic":"./assets/scareface.jpg",
+        "url": "https://www.youtube.com/watch?v=SzM9kbfKqow"
+      },{"id":"4",
+        "Title": "Dead poets society",
+        "Released": 1989,
+        "price": 5,
+        "pic":"./assets/flew.jpg",
+        "url": "https://www.youtube.com/watch?v=-8yKSbdDens"
+      },
+      {"id":"5",
+        "Title": "Goodfellas",
+        "Released": 1990,
+        "price": 10,
+        "pic":"./assets/goodfellas.jpg",
+        "url": "./assets/practice1.mp4"
+      }
+  ]}
+  
+
